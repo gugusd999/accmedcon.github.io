@@ -284,11 +284,11 @@ define(['jquery', 'main', 'axios', 'aes', 'baseurl'], function($, main, axios, o
   }
 
 
-  // helper.baseurl = `http://sinarmed.ip-dynamic.com/accounting_server/accounting_server/data.php?key=`;
+  helper.baseurl = `http://sinarmed.ip-dynamic.com/accounting_server/accounting_server/data.php?key=`;
 
   // helper.baseurl = `http://192.168.161.100/accounting_server/accounting_server/data.php?key=`;
 
-  helper.baseurl = `http://grap-store.com/accounting_server/data.php?key=`;
+  // helper.baseurl = `http://grap-store.com/accounting_server/data.php?key=`;
 
   // helper.baseurl = `http://localhost:8080/data.php?key=`;
 
