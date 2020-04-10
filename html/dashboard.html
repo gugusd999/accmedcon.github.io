@@ -1,0 +1,221 @@
+<style media="screen">
+  .pointer{
+    cursor: pointer;
+  }
+
+  .navigation{
+    display: inline-block;
+    list-style: none;
+  }
+
+  .navigation li{
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .navigation li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .navigation li a:hover{
+    color: red;
+  }
+
+  .bg-img-01{
+    background-image: url('asset/Gambar/Home/bg-atas-home-red-trsprnt.png');
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: 0% 100%;
+  }
+
+  .bg-img-01::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('asset/Gambar/Home/bg-atas-home-red.png');
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: 100% 0%;
+  }
+
+  .padding-5{
+    padding-top: 20px;
+  }
+
+  .img-menu{
+    width: 80px;
+  }
+
+
+  .footer{
+    background-color: #DA251C;
+    padding: 15px 5px;
+  }
+
+  .cicle-tab::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #DA251C;
+    z-index: -1;
+    justify-content: center;
+  }
+
+  .cicle-tab{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>
+
+<div class="container">
+  <div class="row padding-5">
+    <div class="col-sm-6">
+      <h4 class="card-title">Accounting</h4>
+    </div>
+    <div class="col-sm-6 text-right">
+      <ul class="navigation">
+        <li>
+          <a href="#/">Dashboard</a>
+        </li>
+        <li>
+          <a href="#/">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm-6">
+      <h1>Atur Datamu <br> Dengan Mudah</h1>
+      <p>Mengelola laporan keuangan lebih mudah dan lengkap, seperti neraca keuangan, arus kas, laba – rugi, dan lainnya. </p>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="cicle-tab">
+            0%
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="cicle-tab">
+            0%
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="cicle-tab">
+            0%
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="cicle-tab">
+            0%
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img class="img-fluid" src="asset/gambar/home/ilus-home2.png" alt="">
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <a href="#/master" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Data Master</span>
+              <p class="text-dark">Seluruh pilihan data utama pada Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#/transaksi" class="col-sm-6 mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Transaksi</span>
+              <p class="text-dark">Data transaksi Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#/order" class="col-sm-6 mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Marketing</span>
+              <p class="text-dark">Kelola data marketing dan customer Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div menuju data-go="#/pembayaran" class="col-sm-6 mt-3 pointer">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Pembayaran</span>
+              <p class="text-dark">Data pembayaran Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#/laporan" class="col-sm-6 mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Laporan</span>
+              <p class="text-dark">Laporan keuangan mulai dari neraca keuangan, arus kas, laba – rugi, dan lainnya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+<section class="footer mt-5 text-white">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Medcon
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>

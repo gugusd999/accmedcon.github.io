@@ -1,0 +1,265 @@
+<style media="screen">
+  .pointer{
+    cursor: pointer;
+  }
+
+  .navigation{
+    display: inline-block;
+    list-style: none;
+  }
+
+  .navigation li{
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .navigation li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .navigation li a:hover{
+    color: red;
+  }
+
+  .padding-5{
+    padding-top: 20px;
+		background: #DA251C;
+  }
+
+  .img-menu{
+    width: 80px;
+  }
+
+
+  .footer{
+    background-color: #DA251C;
+    padding: 15px 5px;
+  }
+
+  .cicle-tab::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    background-color: #DA251C;
+    z-index: -1;
+    justify-content: center;
+  }
+
+  .cicle-tab{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+	.card-top::before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		margin-top: -5px;
+		background: red;
+		z-index: -1;
+	}
+
+	.red-part{
+		margin-top: 50px;
+	}
+
+	.red-part::before{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 28px;
+		margin-top: -28px;
+		background-image: url('asset/redpart.png');
+		background-size: cover;
+		z-index: -1;
+		justify-content: center;
+	}
+
+	#set-tahun-transaksi{
+		display: inline-block;
+	}
+
+</style>
+
+<div class="container-fluid text-white">
+	<div class="row padding-5">
+		<div class="col-sm-6">
+			<h4 class="card-title">Accounting</h4>
+		</div>
+		<div class="col-sm-6 text-right">
+			<ul class="navigation">
+				<li>
+					<a class="text-white" href="#/">Dashboard</a>
+				</li>
+				<li>
+					<a class="text-white" href="#/">Profile</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 mt-3">
+        <div class="card card-top">
+          <div class="card-body text-center">
+            <div class="row">
+            	<div class="col-sm-6 text-left">
+            		<h1>Accounting Bulanan</h1>
+								<p>Laporan keuangan bulanan Sinarmed Jaya.</p>
+            	</div>
+							<div class="col-sm-6 text-right" id="tahun-ganti">
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mt-2">
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="01" data-date="00" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Januari</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="02" data-date="01" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Februari</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="03" data-date="02" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Maret</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="04" data-date="03" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">April</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="05" data-date="04" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Mei</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="06" data-date="05" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Juni</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="07" data-date="06" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Juli</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="08" data-date="07" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Agustus</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="09" data-date="08" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">September</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="10" data-date="09" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Oktober</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="11" data-date="10" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">November</span>
+					</div>
+        </div>
+      </div>
+      <div class="col-sm-3 mt-3">
+        <div data-date-asli="12" data-date="11" bulan-transaksi class="card pointer red-part orange lighten-1 white-text">
+          <div class="card-body text-center">
+            <img src="./asset/Gambar/Bulanan/1.png" width="80px" alt="">
+          </div>
+					<div class="card-footer text-center">
+						<span class="card-title" style="font-size: 16px;">Desember</span>
+					</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<section class="footer mt-5 text-white">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Medcon
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>

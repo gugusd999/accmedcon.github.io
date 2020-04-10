@@ -1,0 +1,36 @@
+.gg-modal{
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.gg-modal-container{
+  padding: 50px;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.relative{
+  position: relative;
+}
+
+.top-right{
+  position: absolute;
+  right: 0;
+  padding: 15px;
+  top: 0;
+}
+
+select[tahun-style-2] > option:hover{
+  background: white;
+}
+select[tahun-style-2]{
+  padding: 5px;
+  background: red;
+  color: white;
+}

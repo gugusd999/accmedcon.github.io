@@ -1,0 +1,285 @@
+<style media="screen">
+  .pointer{
+    cursor: pointer;
+  }
+
+  .navigation{
+    display: inline-block;
+    list-style: none;
+  }
+
+  .navigation li{
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .navigation li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .navigation li a:hover{
+    color: red;
+  }
+
+  .padding-5{
+    padding-top: 20px;
+		background: #DA251C;
+  }
+
+  .img-menu{
+    width: 80px;
+  }
+
+
+  .footer{
+    background-color: #DA251C;
+    padding: 15px 5px;
+  }
+
+  .cicle-tab::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    background-color: #DA251C;
+    z-index: -1;
+    justify-content: center;
+  }
+
+  .cicle-tab{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+	.card-top::before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		margin-top: -5px;
+		background: red;
+		z-index: -1;
+	}
+
+	.red-part{
+		margin-top: 50px;
+	}
+
+	.red-part::before{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 28px;
+		margin-top: -28px;
+		background-image: url('asset/redpart.png');
+		background-size: cover;
+		z-index: -1;
+		justify-content: center;
+	}
+
+	#set-tahun-transaksi{
+		display: inline-block;
+	}
+
+  .ilustrasi-1{
+    width: 300px;
+    min-width: 300px;
+    max-width:300px;
+    margin-bottom: -60px;
+  }
+
+  .ilustrasi-2{
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+  }
+
+  /* .btn-custome::before{
+    content: "";
+    display: block;
+    position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+    margin-top: -10px;
+    margin-left: -8px;
+		background: red;
+		z-index: -1;
+  } */
+  .btn-custome:hover{
+    background: white;
+    color: black;
+  }
+
+  .btn-custome{
+    position: relative;
+    padding: 5px 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    background: red;
+    color: black;
+    color: white;
+    border: 0.5px solid #dddddd;
+  }
+
+</style>
+<style media="screen">
+  .pointer{
+    cursor: pointer;
+  }
+
+  .table-laporan{
+    border-collapse: collapse;
+    min-width: 100%;
+  }
+
+  .table-laporan td,
+  .table-laporan th{
+    padding: 3px 5px;
+    border: 1px solid #dfdfdf;
+  }
+
+
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #section-to-print, #section-to-print * {
+      visibility: visible;
+    }
+    #section-to-print {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    table{
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td{
+      padding: 5px, 3px;
+      border: 1px solid #dfdfdf;
+    }
+
+  }
+
+</style>
+
+
+<div class="container-fluid text-white">
+	<div class="row padding-5">
+		<div class="col-sm-6">
+			<h4 class="card-title">Accounting</h4>
+		</div>
+		<div class="col-sm-6 text-right">
+			<ul class="navigation">
+				<li>
+					<a class="text-white" href="#/">Dashboard</a>
+				</li>
+				<li>
+					<a class="text-white" href="#/">Profile</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt-3">
+
+  <div class="row">
+
+
+    <div class="col-sm-12 mt-3">
+      <div class="card card-top">
+        <div class="card-body text-center">
+          <div class="row">
+            <div class="col-sm-3 text-left d-flex align-items-end">
+              <img src="./asset/Gambar/Transaksi/ilus-transaksi2.png" class="ilustrasi-1" alt="">
+            </div>
+            <div class="col-sm-6 text-center">
+              <h1>Jurnal</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-sm-3 text-left d-flex justify-content-end">
+              <img src="./asset/Gambar/Transaksi/ilus-transaksi-2.png" class="ilustrasi-2" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 mb-3 mt-5" id="pilih-jurnal">
+      <button journal-menu script-data="jurnal.view('umum')" class="btn-custome">Jurnal Umum</button>
+      <button journal-menu script-data="jurnal.view('pembelian')" class="btn-custome">Jurnal Pembelian</button>
+      <a href="#/laporan" class="btn-custome"> Kembali Ke Laporan</a>
+    </div>
+    <div class="col-sm-12" id="tahun-choice">
+
+    </div>
+        <div class="col-sm-12">
+          <button print-data data-position="print-jurnal" class="btn btn-success mt-2">Print</button>
+        </div>
+
+        <div>
+
+        </div>
+      </div>
+  </div>
+
+<section style="min-height: 300px;">
+<div id="print-jurnal" class="container-fluid mt-3">
+  <style>
+      .table-border, .table-no-border{
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .table-no-border th, .table-no-border td{
+        padding: 5px;
+      }
+
+      .table-border th, .table-border td{
+        padding: 5px;
+        border: 1px solid #dfdfdf;
+      }
+
+      .border{
+        border: 1px solid #dfdfdf;
+      }
+
+  </style>
+  <div class="row">
+    <div class="col-sm-12" id="jurnal">
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="footer mt-5 text-white">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Medcon
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>

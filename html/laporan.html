@@ -1,0 +1,257 @@
+<style media="screen">
+  .pointer{
+    cursor: pointer;
+  }
+
+  .navigation{
+    display: inline-block;
+    list-style: none;
+  }
+
+  .navigation li{
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .navigation li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .navigation li a:hover{
+    color: red;
+  }
+
+  .bg-img-01{
+    background-image: url('asset/Gambar/Home/bg-atas-home-red-trsprnt.png');
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: 0% 100%;
+  }
+
+  .bg-img-01::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('asset/Gambar/Home/bg-atas-home-red.png');
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: 100% 0%;
+  }
+
+  .padding-5{
+    padding-top: 20px;
+  }
+
+  .img-menu{
+    width: 80px;
+  }
+
+
+  .footer{
+    background-color: #DA251C;
+    padding: 15px 5px;
+  }
+
+  .cicle-tab::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    background-color: #DA251C;
+    z-index: -1;
+    justify-content: center;
+  }
+
+  .cicle-tab{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+</style>
+
+<div class="container">
+  <div class="row padding-5">
+    <div class="col-sm-6">
+      <h4 class="card-title">Accounting</h4>
+    </div>
+    <div class="col-sm-6 text-right">
+      <ul class="navigation">
+        <li>
+          <a href="#/">Dashboard</a>
+        </li>
+        <li>
+          <a href="#/">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm-6">
+      <h1>Laporan</h1>
+      <p>Laporan keuangan mulai dari neraca keuangan, arus kas, laba – rugi, dan lainnya.</p>
+    </div>
+    <div class="col-sm-6">
+      <img class="img-fluid" src="asset/gambar/home/ilus-home2.png" alt="">
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <a href="#/jurnal" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Jurnal</span>
+              <p class="text-dark">Kelolal data jurnal Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#/bkk" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Bukti Transaksi</span>
+              <p class="text-dark">Kelola data transaksi Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#/neraca" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Neraca Saldo</span>
+              <p class="text-dark">Kelola data neraca saldo Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#/neraca-bulanan" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Neraca & Rugi Laba</span>
+              <p class="text-dark">Kelola data neraca & rugi laba Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+      <a href="#/laporan/persediaan" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Persediaan Barang</span>
+              <p class="text-dark">Kelola data aset barang Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    </a>
+      <a href="#/laporan/inventaris" class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+            </div>
+            <div class="col-sm-8 text-left">
+              <span style="font-size: 20px; font-weight: 700; color: black;">Inventaris</span>
+              <p class="text-dark">Kelola data inventaris Sinarmed Jaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </a>
+    <a href="#/laporan/bukubesar" class="col-sm-6  mt-3">
+    <div class="card">
+      <div class="card-body text-center" id="crud">
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid img-menu" src="./asset/Gambar/Home/icon-laporan2.png" alt="">
+          </div>
+          <div class="col-sm-8 text-left">
+            <span style="font-size: 20px; font-weight: 700; color: black;">Buku Besar</span>
+            <p class="text-dark">Kelola buku besar anda</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+    <!-- <a href="#/laba_rugi" class="col-sm-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <img class="img-fluid" src="./arsip/icon/data_master.png" alt="">
+          <span style="font-size: 20px; font-weight: 700; color: black;">Laba Rugi</span>
+        </div>
+      </div>
+    </a>
+    <a href="#/hutang" class="col-sm-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <img class="img-fluid" src="./arsip/icon/data_master.png" alt="">
+          <span style="font-size: 20px; font-weight: 700; color: black;">Laporan Hutang</span>
+        </div>
+      </div>
+    </a> -->
+    <!-- <a href="#/Journal" class="col-sm-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <img class="img-fluid" src="./arsip/icon/data_master.png" alt="">
+          <span style="font-size: 20px; font-weight: 700; color: black;">Persediaan</span>
+        </div>
+      </div>
+    </a> -->
+  </div>
+</div>
+</div>
+</div>
+
+<section class="footer mt-5 text-white">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Medcon
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>

@@ -1,5 +1,141 @@
-<html>
-<body>
-<h1>Hallo</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Accounting</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="./css/select2.css">
+		<link rel="stylesheet" href="./icon/icon.css">
+		<link rel="stylesheet" href="./css/modal.css">
+		<link rel="stylesheet" href="./css/select.css">
+		<!-- <link rel="stylesheet" href="./cssPrint/style.css"> -->
+		<style media="screen">
+			td, th{
+				wrap-content: nowrap;
+			}
+		</style>
+	</head>
+	<body class="bg-img-01">
+
+		<div id="main">
+
+		</div>
+
+		<script src="./require.js" charset="utf-8"></script>
+		<script src="./config.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			require([
+				'sammy',
+				'page/page',
+				'page/page2',
+				'page/dashboard',
+				'page/transaksiUmum',
+				'page/transaksiUmum2',
+				'page/transaksiUmum3',
+				'page/transaksiUmum4',
+				'page/order',
+				'page/order2',
+				'page/permintaan_sj',
+				'page/permintaan_sjp',
+				'page/hutang_umum',
+				'page/hutang_barang',
+				'page/laporan/laporan',
+				'page/laporan/jurnal',
+				'page/laporan/bkk',
+				'page/laporan/hutang',
+				'page/laporan/neraca',
+				'page/laporan/neracaBulan',
+				'page/laporan/persediaan',
+				'page/laporan/inventaris',
+				'page/laporan/bukubesar',
+				'page/output/printsj',
+				'action/click',
+				'action/doAfter',
+				'action/crud'
+			], function(sammy, obj, obj2, dashboard, transaksiUmum, transaksiUmum2, transaksiUmum3, transaksiUmum4, order, order2, permintaan_sj, permintaan_sjp, hutang_umum, hutang_barang
+				, laporan, jurnal, bkk, hutang, neraca, neracaBulan, persediaan, inventaris, bukubesar, printsj){
+					var app = sammy(function() {
+						// master data release
+						this.get('#/', function() {
+							dashboard.view();
+						});
+						this.get('#/master', function() {
+							obj.view();
+						});
+						this.get('#/transaksi', function() {
+							transaksiUmum.view();
+						});
+						this.get('#/transaksi-2', function() {
+							transaksiUmum2.view();
+						});
+						this.get('#/transaksi-3', function() {
+							transaksiUmum3.view();
+						});
+						this.get('#/transaksi-4', function() {
+							transaksiUmum4.view();
+						});
+						this.get('#/order', function() {
+							order.view();
+						});
+						this.get('#/order-2', function() {
+							order2.view();
+						});
+						this.get('#/permintaan_sj', function() {
+							permintaan_sj.view();
+						});
+						this.get('#/permintaan_sjp', function() {
+							permintaan_sjp.view();
+						});
+						this.get('#/pembayaran', function() {
+							obj2.view();
+						});
+						this.get('#/hutang-umum', function() {
+							hutang_umum.view();
+						});
+						this.get('#/hutang-barang', function() {
+							hutang_barang.view();
+						});
+						this.get('#/laporan', function() {
+							laporan.view();
+						});
+						this.get('#/jurnal', function() {
+							jurnal.view();
+						});
+						this.get('#/bkk', function() {
+							bkk.view();
+						});
+						this.get('#/hutang', function() {
+							hutang.view();
+						});
+						this.get('#/neraca', function() {
+							neraca.view();
+						});
+						this.get('#/pengeluaran_barang', function() {
+							permintaan_sjp.view("pengeluaran_barang");
+						});
+						this.get('#/neraca-bulanan', function() {
+							neracaBulan.view();
+						});
+        				this.get('#/laporan/persediaan', function() {
+							persediaan.view();
+						});
+            			this.get('#/laporan/inventaris', function() {
+							inventaris.view();
+						});
+            			this.get('#/laporan/bukubesar', function() {
+							// console.log('ok');
+							bukubesar.view();
+						});
+						this.get('#/print/data/sj/:id', function() {
+							let id = this.params['id'];
+							// console.log(id);
+							printsj.view(id);
+						});
+					});
+					app.run("#/");
+			});
+		</script>
+
+	</body>
 </html>
